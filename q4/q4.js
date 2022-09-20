@@ -46,21 +46,19 @@ console.log("The stack:"+newStack.itemStacks);
 console.log("The top element(last ement added to the stack):"+newStack.top());
 
 newStack.remove();
-this.items = [5];
 console.log(newStack.itemStacks);
 
 console.log("Is the stack empty :"+newStack.isEmpty());
 
 console.log("The size of the stack:"+newStack.size());
-
-const removeOdd = (myArray) => {
+var evenarr = []
+const removeOdd = (m) => {
     for (let j = 0; j < newStack.size(); j++) {
-        if (myArray[j] % 2 === 1) {
-            myArray.splice(j,1);
-            break;
+        if (m[j] % 2 === 0) {
+            evenarr.push(m[j]);
         }
     }
-    return myArray;
+    return evenarr;
 };
 removeOddOutput = removeOdd(newStack.itemStacks);
 console.log("the output stack after removing odd numbers: "+removeOddOutput);
